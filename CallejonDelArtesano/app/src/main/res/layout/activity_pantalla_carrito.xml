@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
+
+
 
     tools:context=".PantallaCarrito">
 
@@ -25,41 +26,60 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/carrito"
+
             android:id="@+id/fragment_container">
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="180dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="48dp"
+                        android:text="Tu carrito tiene:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.185"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="287dp"
-                    android:layout_height="62dp"
-                    android:text="Continuar Comprando"
-                    android:textSize="16dp"
-                    app:backgroundTint="#2196F3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.865"
-                    tools:ignore="MissingConstraints" />
+                    <TextView
+                        android:id="@+id/textviewCarrito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
 
-                <TextView
-                    android:id="@+id/texto"
-                    android:layout_width="288dp"
-                    android:layout_height="97dp"
-                    android:gravity="center"
-                    android:text="Tu Carrito Del Callejon Del Artesano Esta Vacio"
-                    android:textSize="26dp"
-                    app:layout_constraintBottom_toTopOf="@+id/button2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.504"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.858" />
+                        android:padding="10dp"
+                        android:background="#454545"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/textview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="45dp"
+                        android:text="Total:"
+                        app:layout_constraintStart_toEndOf="@+id/textView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textviewTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="45dp"
+                        android:text=""
+                        app:layout_constraintStart_toEndOf="@+id/textview2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
         </FrameLayout>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView

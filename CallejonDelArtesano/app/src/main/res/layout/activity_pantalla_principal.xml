@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    tools:context=".PantallaPrincipal">
 
+    tools:context=".PantallaPrincipal">
+<!--tools:openDrawer="start"-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,41 +25,67 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fragment_container">
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textviewOfertas1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ofertas del día"
-                    android:textColor="@color/white"
-                    android:textSize="30dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-                </TextView>
-
-                <ImageView
-                    android:id="@+id/imageView5"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:src="@drawable/arte"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textviewOfertas1" />
+                    android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/buttonVermas"
-                    android:text="Ver más"
-                    android:textSize="14dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
+                    <TextView
+                        android:id="@+id/textviewOfertas1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/TituloOfertas"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:src="@drawable/img1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textviewOfertas1" />
+
+                    <Button
+                        android:id="@+id/buttonVermas"
+                        android:text="@string/vermas"
+                        android:textSize="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView5"/>
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:src="@drawable/img3"
+                        android:layout_marginTop="25dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonVermas" />
+
+                    <Button
+                        android:id="@+id/buttonVermas2"
+                        android:text="@string/vermas"
+                        android:textSize="14dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+
         </FrameLayout>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView

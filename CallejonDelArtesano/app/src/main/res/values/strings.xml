@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">CallejonDelArtesano</string>
-    <string name="email">Email</string>
-    <string name="password">Cotnraseña</string>
-    <string name="nombre">Nombre</string>
-    <string name="confrimar">Confrimar</string>
-    <string name="inicia_sesi_n">Inicia sesión</string>
-    <string name="crear_una_cuenta">Crear una cuenta</string>
-    <string name="inicar_sesion">Inicar sesion</string>
-    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Cotnraseña</string>
+    <string name="nombre" translatable="false">Nombre</string>
+    <string name="confrimar" translatable="false">Confrimar</string>
+    <string name="inicia_sesi_n" translatable="false">Inicia sesión</string>
+    <string name="crear_una_cuenta" translatable="false">Crear una cuenta</string>
+    <string name="inicar_sesion" translatable="false">Inicar sesion</string>
+    <string name="iniciar_sesion" translatable="false">Iniciar sesión</string>
 
-    <string name="navigation_drawer_open">Se abre el menú</string>
-    <string name="navigation_drawer_close">Se cierra el menú</string>
+    <string name="navigation_drawer_open" translatable="false">Se abre el menú</string>
+    <string name="navigation_drawer_close" translatable="false">Se cierra el menú</string>
 
     <string-array name="metodo">
         <item> Tarjeta de Crédito</item>
@@ -18,11 +18,13 @@
         <item> Paypal</item>
         <item> Efectivo </item>
     </string-array>
-    <string name="Especificaciones_text"> ◘ Cerámica sin plomo. \n◘ Diseñado por Sue Zipping.
+    <string name="Especificaciones_text" translatable="false"> ◘ Cerámica sin plomo. \n◘ Diseñado por Sue Zipping.
         \n◘ Vajilla de cerámica pintada a mano.
         \n◘ Apto para microondas
         \n◘ Incluye: juego/3 platos llanos y 6 platos ondos
         \n◘ Apto para lavavajillas
         \n◘ Color: Cafe, Blanco, Hueso</string>
-    <string name="somos">El callejón del artesano es una plataforma dedicada para los artesanos, dentro de la cual usted podrá realizar ventas de las artesanias con las que cuenta. Todo esto siendo factible en un solo lugar. Además contamos con una seguridad en encriptación.</string>
+    <string name="somos" translatable="false">El callejón del artesano es una plataforma dedicada para los artesanos, dentro de la cual usted podrá realizar ventas de las artesanias con las que cuenta. Todo esto siendo factible en un solo lugar. Además contamos con una seguridad en encriptación.</string>
+    <string name="TituloOfertas">Ofertas del día</string>
+    <string name="vermas">Ver más</string>
 </resources>

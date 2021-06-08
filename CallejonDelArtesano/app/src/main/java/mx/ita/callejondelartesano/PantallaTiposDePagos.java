@@ -50,33 +50,37 @@ public class PantallaTiposDePagos extends AppCompatActivity implements Navigatio
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Intent incomingIntent = getIntent();
+        String [] incomingValue = incomingIntent.getStringArrayExtra("array");
         switch (item.getItemId()){
-            case R.id.nav_search:
-                Intent intent = new Intent(this, PantallaBusqueda.class);
-                startActivity(intent);
-                break;
             case R.id.nav_carrito:
-                intent = new Intent(this, PantallaCarrito.class);
+                Intent intent = new Intent(this, PantallaCarrito.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
             case R.id.nav_home:
                 intent = new Intent(this, PantallaPrincipal.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
             case R.id.nab_nosotrs:
                 intent = new Intent(this, PantallaSobreNosotros.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
             case R.id.nav_pedidos:
                 intent = new Intent(this, PantallaPedidos.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
             case R.id.nav_promociones:
                 intent = new Intent(this, PantallaArticulosDestacados.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
             case R.id.nav_formas_pago:
                 intent = new Intent(this, PantallaTiposDePagos.class);
+                intent.putExtra("array",incomingValue);
                 startActivity(intent);
                 break;
         }
